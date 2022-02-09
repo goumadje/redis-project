@@ -23,7 +23,7 @@ resource "aws_elasticache_cluster" "redis" {
   engine_version       = "${var.engine_version}"
   maintenance_window   = "${var.maintenance_window}"
   node_type            = "${var.instance_type}"
-  num_cache_nodes      = "1"
+  num_cache_nodes      = "2"
   parameter_group_name = "${var.parameter_group_name}"
   port                 = "6379"
   subnet_group_name    = "${aws_elasticache_subnet_group.default.name}"
